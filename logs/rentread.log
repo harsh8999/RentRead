@@ -1,0 +1,32 @@
+2024-03-30T15:10:15.250+05:30  INFO 12748 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 12748 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-30T15:10:15.254+05:30 DEBUG 12748 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-30T15:10:15.257+05:30  INFO 12748 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-30T15:10:15.474+05:30  INFO 12748 --- [RentRead] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-30T15:10:15.477+05:30  INFO 12748 --- [RentRead] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-30T15:10:17.633+05:30  INFO 12748 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-30T15:10:17.699+05:30  INFO 12748 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JPA repository interfaces.
+2024-03-30T15:10:19.295+05:30  INFO 12748 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-30T15:10:19.337+05:30  INFO 12748 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-30T15:10:19.339+05:30  INFO 12748 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-30T15:10:19.523+05:30  INFO 12748 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-30T15:10:19.525+05:30  INFO 12748 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4045 ms
+2024-03-30T15:10:19.911+05:30  INFO 12748 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-30T15:10:20.069+05:30  INFO 12748 --- [RentRead] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-30T15:10:20.162+05:30  INFO 12748 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-30T15:10:20.711+05:30  INFO 12748 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-30T15:10:20.787+05:30  INFO 12748 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-30T15:10:21.533+05:30  INFO 12748 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6954d971
+2024-03-30T15:10:21.539+05:30  INFO 12748 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-30T15:10:22.614+05:30  INFO 12748 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-30T15:10:22.625+05:30  INFO 12748 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-30T15:10:22.780+05:30  WARN 12748 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-30T15:10:23.602+05:30  WARN 12748 --- [RentRead] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2e091494-5561-4e44-b847-cf58710e1405
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2024-03-30T15:10:23.863+05:30  INFO 12748 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8a77933, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ba42b02, org.springframework.security.web.context.SecurityContextHolderFilter@6c9443ce, org.springframework.security.web.header.HeaderWriterFilter@4f3db4f4, org.springframework.web.filter.CorsFilter@1322a3cf, org.springframework.security.web.csrf.CsrfFilter@6f943618, org.springframework.security.web.authentication.logout.LogoutFilter@76dcbc1d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@54d6c4c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3fa5730e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5ecf593e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@51be43d6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d6dadc0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@12b193da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d92cd35, org.springframework.security.web.access.ExceptionTranslationFilter@7b319268, org.springframework.security.web.access.intercept.AuthorizationFilter@c9f5ec4]
+2024-03-30T15:10:23.990+05:30  INFO 12748 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-30T15:10:24.084+05:30  INFO 12748 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-30T15:10:24.124+05:30  INFO 12748 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 9.917 seconds (process running for 11.068)
