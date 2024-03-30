@@ -7,12 +7,13 @@ import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.harsh.RentRead.exception.exceptions.ResourceNotFoundException;
 import com.harsh.RentRead.user.repository.UserRepository;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -20,14 +21,10 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Configuration
 @Slf4j
+@AllArgsConstructor
 public class UserSecurityConfiguraton {
     
     private UserRepository userRepository;
-
-
-    public UserSecurityConfiguraton(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     /**
      * Defines a UserDetailsService bean that retrieves user details from the UserRepository.
@@ -39,7 +36,7 @@ public class UserSecurityConfiguraton {
         return username -> {
             log.debug("Fetching user details for username: {}", username);
             return userRepository.findByEmail(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not Found!!!"));
+                .orElseThrow(() -> new ResourceNotFoundException("User", "Email", username));
         };
     }
 

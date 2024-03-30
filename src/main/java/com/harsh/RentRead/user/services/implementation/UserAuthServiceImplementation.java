@@ -3,10 +3,10 @@ package com.harsh.RentRead.user.services.implementation;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.harsh.RentRead.exception.exceptions.ResourceNotFoundException;
 import com.harsh.RentRead.user.controller.exchanges.LoginUserDto;
 import com.harsh.RentRead.user.controller.exchanges.SignUpUserDto;
 import com.harsh.RentRead.user.dto.UserDto;
@@ -15,24 +15,22 @@ import com.harsh.RentRead.user.entity.enums.Role;
 import com.harsh.RentRead.user.repository.UserRepository;
 import com.harsh.RentRead.user.services.UserAuthService;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Implementation of the UserAuthService interface.
+ * Provides methods for user authentication and sign-up.
+ */
 @Service
 @Slf4j
+@AllArgsConstructor
 public class UserAuthServiceImplementation implements UserAuthService {
 
     private UserRepository userRepository;
     private PasswordEncoder passwordEncoder;
     private ModelMapper modelMapper;
     private AuthenticationManager authenticationManager;
-
-    public UserAuthServiceImplementation(UserRepository userRepository, PasswordEncoder passwordEncoder,
-            ModelMapper modelMapper, AuthenticationManager authenticationManager) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
-        this.modelMapper = modelMapper;
-        this.authenticationManager = authenticationManager;
-    }
 
     @Override
     public UserDto signUp(SignUpUserDto requestUserDto) {
@@ -41,17 +39,19 @@ public class UserAuthServiceImplementation implements UserAuthService {
             throw new IllegalArgumentException("Request cannot be null or missing required fields");
         }
 
-        User user = new User().builder()
-            .firstName(requestUserDto.getFirstName())
-            .lastName(requestUserDto.getLastName())
-            .email(requestUserDto.getEmail())
-            .password(passwordEncoder.encode(requestUserDto.getPassword()))
-            .build();
+        User user = new User();
+        user.setFirstName(requestUserDto.getFirstName());
+        user.setLastName(requestUserDto.getLastName());
+        user.setEmail(requestUserDto.getEmail());
+        user.setPassword(passwordEncoder.encode(requestUserDto.getPassword()));
         
         if (requestUserDto.getRole() == null) {
-            user.setRole(Role.USER);
+            user.addRole(Role.USER);
         } else {
-            user.setRole(Role.valueOf(requestUserDto.getRole().toUpperCase()));
+            if (requestUserDto.getRole().equalsIgnoreCase("ADMIN")) 
+                user.addRole(Role.ADMIN);
+            if (requestUserDto.getRole().equalsIgnoreCase("USER")) 
+                user.addRole(Role.USER);
         }
 
         // save the user
@@ -65,13 +65,12 @@ public class UserAuthServiceImplementation implements UserAuthService {
 
     @Override
     public UserDto authenticate(LoginUserDto loginUserDto) {
-        
         // log
         log.info("Authenticating user with email: {}", loginUserDto.getEmail());
             
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginUserDto.getEmail(), loginUserDto.getPassword()));
         log.info("Authentication successful for user with email: {}", loginUserDto.getEmail());
-        User user = userRepository.findByEmail(loginUserDto.getEmail()).orElseThrow(() -> new UsernameNotFoundException("User not Found!!!"));
+        User user = userRepository.findByEmail(loginUserDto.getEmail()).orElseThrow(() -> new ResourceNotFoundException("User", "Email", loginUserDto.getEmail()));
         return modelMapper.map(user, UserDto.class);
     }
     

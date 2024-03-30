@@ -2,7 +2,10 @@ package com.harsh.RentRead.user.entity;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,17 +14,23 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.harsh.RentRead.user.entity.enums.Role;
 
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Entity class representing a user in the system.
@@ -31,7 +40,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@Builder
+@Slf4j
 public class User implements UserDetails {
     
     /**
@@ -66,9 +75,13 @@ public class User implements UserDetails {
     String password;
 
     /**
-     * The role of the user (e.g., USER or ADMIN).
+     * The roles assigned to the user.
      */
-    Role role;
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    Set<Role> roles = new HashSet<>();
+
 
     /**
      * The date and time when the user was created.
@@ -78,9 +91,25 @@ public class User implements UserDetails {
     @Column(updatable = false, name = "created_at")
     Date createdAt;
 
+    /**
+     * Adds a role to the user.
+     * 
+     * @param role The role to be added.
+     * @throws IllegalArgumentException If the role is null.
+     */
+    public void addRole(Role role) {
+        if(role == null) {
+            throw new IllegalArgumentException("Role Cannot be null!!!");
+        }
+        roles.add(role);
+        log.debug("Role {} added to user {}", role, getUsername());
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return roles.stream()
+            .map(role -> new SimpleGrantedAuthority(role.name()))
+            .collect(Collectors.toList());
     }
 
     @Override

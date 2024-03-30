@@ -7,33 +7,30 @@ import com.harsh.RentRead.user.controller.exchanges.SignUpUserDto;
 import com.harsh.RentRead.user.dto.UserDto;
 import com.harsh.RentRead.user.services.UserAuthService;
 
+import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+
 
 /**
  * Controller class for handling user authentication operations.
  */
 @Slf4j
 @RestController
+@AllArgsConstructor
+@RequestMapping("/api/v1")
 public class UserAuthController {
 
-    private static final String BASE_URL = "/api/v1/auth";
+    private static final String UN_AUTHENTICATED_BASE_URL = "/auth";
     
     private UserAuthService userAuthService;
-
-    /**
-     * Constructs a new UserAuthController with the specified UserAuthService.
-     * 
-     * @param userAuthService The UserAuthService to be used for user authentication.
-     */
-    public UserAuthController(UserAuthService userAuthService) {
-        this.userAuthService = userAuthService;
-    }
 
     /**
      * Handles the root directory endpoint and returns a welcome message.
@@ -56,8 +53,8 @@ public class UserAuthController {
      * @param signUpUserDto The SignUpUserDto containing user sign-up details.
      * @return ResponseEntity containing the newly signed-up user DTO.
      */
-    @PostMapping(BASE_URL + "/signup")
-    public ResponseEntity<UserDto> signUp(@RequestBody SignUpUserDto signUpUserDto) {
+    @PostMapping(UN_AUTHENTICATED_BASE_URL + "/signup")
+    public ResponseEntity<UserDto> signUp(@Valid @RequestBody SignUpUserDto signUpUserDto) {
         // Log the message
         log.info("Received sign-up request for email: {}", signUpUserDto.getEmail());
 
@@ -75,8 +72,8 @@ public class UserAuthController {
      * @param loginUserDto The LoginUserDto containing user login credentials.
      * @return ResponseEntity containing the authenticated user DTO or HTTP UNAUTHORIZED status if login fails.
      */
-    @PostMapping(BASE_URL + "/login")
-    public ResponseEntity<UserDto> login(@RequestBody LoginUserDto loginUserDto) {
+    @PostMapping(UN_AUTHENTICATED_BASE_URL + "/login")
+    public ResponseEntity<UserDto> login(@Valid @RequestBody LoginUserDto loginUserDto) {
         
         log.info("Attempting login for user with email: {}", loginUserDto.getEmail());
 
@@ -91,6 +88,6 @@ public class UserAuthController {
             log.warn("Login failed for user with email: {}", loginUserDto.getEmail());
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
-    }
+    }    
     
 }

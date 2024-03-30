@@ -1,5 +1,8 @@
 package com.harsh.RentRead.user.dto;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.harsh.RentRead.user.entity.enums.Role;
 
 import lombok.AccessLevel;
@@ -40,6 +43,6 @@ public class UserDto {
     /**
      * The role of the user (e.g., USER or ADMIN).
      */
-    Role role;
+    Set<Role> roles = new HashSet<>();
     
 }

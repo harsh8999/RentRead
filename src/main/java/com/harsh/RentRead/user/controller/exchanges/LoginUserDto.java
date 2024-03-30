@@ -19,12 +19,14 @@ public class LoginUserDto {
     
     /**
      * The email address of the user.
+     * This field is required and cannot be null.
      */
     @NotNull
     String email;
 
     /**
      * The password of the user.
+     * This field is required and cannot be null.
      */
     @NotNull
     String password;

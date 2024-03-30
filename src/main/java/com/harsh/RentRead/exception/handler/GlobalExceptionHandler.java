@@ -2,7 +2,6 @@ package com.harsh.RentRead.exception.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -18,20 +17,6 @@ import lombok.extern.slf4j.Slf4j;
 @RestControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
-
-    /**
-     * Handles UsernameNotFoundException and returns an HTTP 404 (Not Found) response.
-     * 
-     * @param ex The UsernameNotFoundException to handle.
-     * @return ResponseEntity containing an ExceptionApiResponse with the error message and HTTP status.
-     */
-    @ExceptionHandler(UsernameNotFoundException.class)
-    public ResponseEntity<ExceptionApiResponse> resourceNotFoundExceptionHandler(UsernameNotFoundException ex){
-        String message = ex.getMessage();
-        log.error("UsernameNotFoundException: {}", message, ex);
-        ExceptionApiResponse apiResponse = new ExceptionApiResponse(message);
-        return new ResponseEntity<>(apiResponse, HttpStatus.NOT_FOUND);
-    }
 
     /**
      * Handles ResourceNotFoundException and returns an HTTP 404 (Not Found) response.
