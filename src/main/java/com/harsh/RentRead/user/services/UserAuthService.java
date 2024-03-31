@@ -3,6 +3,7 @@ package com.harsh.RentRead.user.services;
 import com.harsh.RentRead.user.controller.exchanges.LoginUserDto;
 import com.harsh.RentRead.user.controller.exchanges.SignUpUserDto;
 import com.harsh.RentRead.user.dto.UserDto;
+import com.harsh.RentRead.user.entity.User;
 
 /**
  * Service interface for user authentication and registration operations.
@@ -24,5 +25,7 @@ public interface UserAuthService {
      * @return The UserDto representing the authenticated user.
      */
     UserDto authenticate(LoginUserDto loginUserDto);
+
+    User getLoggedInUser();
 
 }

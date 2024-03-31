@@ -16,6 +16,7 @@ import com.harsh.RentRead.rent.repository.RentalRepository;
 import com.harsh.RentRead.rent.services.RentalService;
 import com.harsh.RentRead.user.entity.User;
 import com.harsh.RentRead.user.repository.UserRepository;
+import com.harsh.RentRead.user.services.UserAuthService;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +30,8 @@ public class RentalServiceImplementation implements RentalService {
 
     private final UserRepository userRepository;
 
+    private final UserAuthService userAuthService;
+
     private final BookRepository bookRepository;
 
     private final ModelMapper modelMapper;
@@ -36,11 +39,10 @@ public class RentalServiceImplementation implements RentalService {
     private static final int RENTAL_LIMIT = 2;
 
     @Override
-    public RentalDto rentBook(Long userId, Long bookId) {
-        log.debug("Renting book with userId {} and bookId {}", userId, bookId);
-        if(userId == null) {
-            throw new IllegalArgumentException("User Id cannot be null!!!");
-        }
+    public RentalDto rentBook(Long bookId) {
+        User loggedInUser = userAuthService.getLoggedInUser();
+        log.debug("Renting book with userId {} and bookId {}", loggedInUser.getId(), bookId);
+        
         if(bookId == null) {
             throw new IllegalArgumentException("Book ID cannot be null");
         }
@@ -48,22 +50,19 @@ public class RentalServiceImplementation implements RentalService {
         Book book = bookRepository.findByIdAndAvailabilityStatus(bookId, true)
             .orElseThrow(() -> new IllegalStateException("Book is not available for rent!"));
 
-        User user = userRepository.findById(userId)
-            .orElseThrow(() -> new ResourceNotFoundException("User", "User Id", Long.toString(userId)));
-
         // check if user has books than RENTAL_LIMIT books
         // we can get null meaning user has no books
-        Optional<List<Rental>> userRentals = rentalRepository.findByUserIdAndActiveStatusTrue(user);
+        Optional<List<Rental>> userRentals = rentalRepository.findByUserIdAndActiveStatusTrue(loggedInUser);
 
         if(userRentals.isPresent() && userRentals.get().size() > RENTAL_LIMIT - 1) {
-            log.warn("User with userId {} has reached the rental limit", userId);
+            log.warn("User with userId {} has reached the rental limit", loggedInUser.getId());
             throw new IllegalStateException("User cannot rent more than "+RENTAL_LIMIT+" books!");
         }
 
         
         Rental rental = new Rental();
         rental.setActiveStatus(true); // rent the book
-        rental.setUserId(user);
+        rental.setUserId(loggedInUser);
         rental.setBookId(book);
 
         Rental savedRental = rentalRepository.save(rental);
@@ -79,23 +78,20 @@ public class RentalServiceImplementation implements RentalService {
     }
 
     @Override
-    public RentalDto returnBook(Long userId, Long bookId) {
-        log.debug("Returning book with userId {} and bookId {}", userId, bookId);
-        if(userId == null) {
-            throw new IllegalArgumentException("User Id cannot be null!!!");
-        }
+    public RentalDto returnBook(Long bookId) {
+        User loggedInUser = userAuthService.getLoggedInUser();
+
+        log.debug("Returning book with userId {} and bookId {}", loggedInUser.getId(), bookId);
+
         if(bookId == null) {
             throw new IllegalArgumentException("Book ID cannot be null");
         }
 
         Book book = bookRepository.findById(bookId)
             .orElseThrow(() -> new ResourceNotFoundException("Book", "Book Id", Long.toString(bookId)));
-        
-        User user = userRepository.findById(userId)
-            .orElseThrow(() -> new ResourceNotFoundException("User", "User Id", Long.toString(userId)));
 
-        Rental rentedBook = rentalRepository.findByUserIdAndBookIdAndActiveStatusTrue(user, book)
-            .orElseThrow(() -> new ResourceNotFoundException("Rental", "User Id and Book Id", "No active rental found for the user and book"));
+        Rental rentedBook = rentalRepository.findByUserIdAndBookIdAndActiveStatusTrue(loggedInUser, book)
+            .orElseThrow(() -> new IllegalStateException("No Book to return!"));
         
         
         // book is returned

@@ -2,6 +2,7 @@ package com.harsh.RentRead.rent.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.harsh.RentRead.rent.controllers.exchanges.ApiResponse;
 import com.harsh.RentRead.rent.dto.RentalDto;
 import com.harsh.RentRead.rent.services.RentalService;
 
@@ -24,26 +25,24 @@ public class RentalController {
 
     private static final String BASE_URL = "/rental";
 
-    @PostMapping(BASE_URL + "/users/{user_id}/books/{book_id}/rent")
+    @PostMapping(BASE_URL + "/books/{book_id}/rent")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
-    public ResponseEntity<RentalDto> rentBook(@PathVariable("user_id") Long userId, @PathVariable("book_id") Long bookId) {
-        log.debug("Received request to rent book with userId {} and bookId {}", userId, bookId);
-        RentalDto rentalDto = rentalService.rentBook(userId, bookId);
-        log.info("Book rented successfully for userId {} and bookId {}", userId, bookId);
+    public ResponseEntity<RentalDto> rentBook(@PathVariable("book_id") Long bookId) {
+        log.debug("Received request to rent book with bookId {}",bookId);
+        RentalDto rentalDto = rentalService.rentBook(bookId);
+        log.info("Book rented successfully for userId {} and bookId {}", rentalDto.getUser().getId(), bookId);
         return ResponseEntity.ok().body(rentalDto);
     }
 
 
-    @PostMapping(BASE_URL + "/users/{user_id}/books/{book_id}/return")
+    @PostMapping(BASE_URL + "/books/{book_id}/return")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
-    public ResponseEntity<RentalDto> returnBook(@PathVariable("user_id") Long userId, @PathVariable("book_id") Long bookId) {
-        log.debug("Received request to return book with userId {} and bookId {}", userId, bookId);
-        RentalDto rentalDto = rentalService.returnBook(userId, bookId);
-        log.info("Book returned successfully for userId {} and bookId {}", userId, bookId);
-        return ResponseEntity.ok().body(rentalDto);
+    public ResponseEntity<ApiResponse> returnBook(@PathVariable("book_id") Long bookId) {
+        log.debug("Received request to return book with bookId {}", bookId);
+        RentalDto returnedBook = rentalService.returnBook(bookId);
+        log.info("Book returned successfully for userId {} and bookId {}", returnedBook.getUser().getId(), bookId);
+
+        return ResponseEntity.ok().body(new ApiResponse("Book returned successfully."));
     }
-    
-
-
 
 }
