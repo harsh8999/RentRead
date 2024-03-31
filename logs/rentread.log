@@ -6476,3 +6476,444 @@ java.lang.IllegalStateException: Book is not available for rent!
 2024-03-31T22:33:49.743+05:30  INFO 14464 --- [RentRead] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-03-31T22:33:49.760+05:30  INFO 14464 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-03-31T22:33:49.795+05:30  INFO 14464 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-31T22:42:04.006+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 15152 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T22:42:04.019+05:30 DEBUG 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T22:42:04.025+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T22:42:04.277+05:30  INFO 15152 --- [RentRead] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-31T22:42:04.280+05:30  INFO 15152 --- [RentRead] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-31T22:42:06.467+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T22:42:06.660+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 3 JPA repository interfaces.
+2024-03-31T22:42:08.384+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-31T22:42:08.434+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-31T22:42:08.435+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-31T22:42:08.616+05:30  INFO 15152 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-31T22:42:08.619+05:30  INFO 15152 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4333 ms
+2024-03-31T22:42:09.029+05:30  INFO 15152 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T22:42:09.163+05:30  INFO 15152 --- [RentRead] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-31T22:42:09.266+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-31T22:42:09.821+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T22:42:09.896+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-31T22:42:10.606+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3878c3b9
+2024-03-31T22:42:10.611+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-31T22:42:13.090+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T22:42:13.275+05:30  INFO 15152 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:42:14.392+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T22:42:14.619+05:30  WARN 15152 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T22:42:15.363+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T22:42:15.502+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20f05d35, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6863ac5c, org.springframework.security.web.context.SecurityContextHolderFilter@16060099, org.springframework.security.web.header.HeaderWriterFilter@7b714105, org.springframework.web.filter.CorsFilter@4b49f06e, org.springframework.security.web.authentication.logout.LogoutFilter@27ed29b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3697649, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64faee1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec15dec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6be0db39, org.springframework.security.web.access.ExceptionTranslationFilter@16045da2, org.springframework.security.web.access.intercept.AuthorizationFilter@11decc4a]
+2024-03-31T22:42:16.072+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-31T22:42:16.176+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-31T22:42:16.231+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 13.291 seconds (process running for 14.256)
+2024-03-31T22:42:25.550+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-31T22:42:25.558+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-31T22:42:25.564+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-03-31T22:42:26.081+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-1] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: harsh@gmail.com
+2024-03-31T22:42:27.040+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-1] c.h.R.rent.controllers.RentalController  : Received request to get all rentals
+2024-03-31T22:42:27.041+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-1] c.h.R.r.s.i.RentalServiceImplementation  : Fetching all rentals
+2024-03-31T22:42:27.215+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-1] c.h.R.r.s.i.RentalServiceImplementation  : Fetched 5 rentals
+2024-03-31T22:42:27.396+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-1] c.h.R.rent.controllers.RentalController  : Returning All Rental details
+2024-03-31T22:44:38.610+05:30  WARN 15152 --- [RentRead] [http-nio-8080-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [118] milliseconds.
+2024-03-31T22:44:46.234+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-7] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: harsh@gmail.com
+2024-03-31T22:44:46.431+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-7] c.h.R.rent.controllers.RentalController  : Received request to get rental details of User Id 2
+2024-03-31T22:44:46.434+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-7] c.h.R.r.s.i.RentalServiceImplementation  : Fetching all rentals of user with userId 2
+2024-03-31T22:44:46.498+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-7] c.h.R.r.s.i.RentalServiceImplementation  : Fetched 4 rentals of user with userId 2
+2024-03-31T22:44:46.501+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-7] c.h.R.rent.controllers.RentalController  : Returning Rental details of User Id 2
+2024-03-31T22:45:20.778+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-8] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: harsh@gmail.com
+2024-03-31T22:45:20.979+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-8] c.h.R.rent.controllers.RentalController  : Received request to get rental details of User Id 1
+2024-03-31T22:45:20.981+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-8] c.h.R.r.s.i.RentalServiceImplementation  : Fetching all rentals of user with userId 1
+2024-03-31T22:45:21.015+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-8] c.h.R.r.s.i.RentalServiceImplementation  : Fetched 1 rentals of user with userId 1
+2024-03-31T22:45:21.017+05:30  INFO 15152 --- [RentRead] [http-nio-8080-exec-8] c.h.R.rent.controllers.RentalController  : Returning Rental details of User Id 1
+2024-03-31T22:45:28.134+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-9] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: harsh@gmail.com
+2024-03-31T22:45:28.415+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-9] c.h.R.rent.controllers.RentalController  : Received request to get rental details of User Id 3
+2024-03-31T22:45:28.417+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-9] c.h.R.r.s.i.RentalServiceImplementation  : Fetching all rentals of user with userId 3
+2024-03-31T22:45:28.435+05:30 ERROR 15152 --- [RentRead] [http-nio-8080-exec-9] c.h.R.e.handler.GlobalExceptionHandler   : ResourceNotFoundException: User not found with User Id: 3
+
+com.harsh.RentRead.exception.exceptions.ResourceNotFoundException: User not found with User Id: 3
+	at com.harsh.RentRead.rent.services.implementations.RentalServiceImplementation.lambda$getAllRentalsOfUser$5(RentalServiceImplementation.java:141) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.harsh.RentRead.rent.services.implementations.RentalServiceImplementation.getAllRentalsOfUser(RentalServiceImplementation.java:141) ~[classes/:na]
+	at com.harsh.RentRead.rent.controllers.RentalController.getRental(RentalController.java:64) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:198) ~[spring-security-core-6.2.3.jar:6.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.5.jar:6.1.5]
+	at com.harsh.RentRead.rent.controllers.RentalController$$SpringCGLIB$$0.getRental(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-03-31T22:45:28.667+05:30  WARN 15152 --- [RentRead] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.harsh.RentRead.exception.exceptions.ResourceNotFoundException: User not found with User Id: 3]
+2024-03-31T22:45:32.819+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-5] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: harsh@gmail.com
+2024-03-31T22:45:33.006+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-5] c.h.R.rent.controllers.RentalController  : Received request to get rental details of User Id 4
+2024-03-31T22:45:33.007+05:30 DEBUG 15152 --- [RentRead] [http-nio-8080-exec-5] c.h.R.r.s.i.RentalServiceImplementation  : Fetching all rentals of user with userId 4
+2024-03-31T22:45:33.031+05:30 ERROR 15152 --- [RentRead] [http-nio-8080-exec-5] c.h.R.e.handler.GlobalExceptionHandler   : ResourceNotFoundException: User not found with User Id: 4
+
+com.harsh.RentRead.exception.exceptions.ResourceNotFoundException: User not found with User Id: 4
+	at com.harsh.RentRead.rent.services.implementations.RentalServiceImplementation.lambda$getAllRentalsOfUser$5(RentalServiceImplementation.java:141) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at com.harsh.RentRead.rent.services.implementations.RentalServiceImplementation.getAllRentalsOfUser(RentalServiceImplementation.java:141) ~[classes/:na]
+	at com.harsh.RentRead.rent.controllers.RentalController.getRental(RentalController.java:64) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:198) ~[spring-security-core-6.2.3.jar:6.2.3]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765) ~[spring-aop-6.1.5.jar:6.1.5]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717) ~[spring-aop-6.1.5.jar:6.1.5]
+	at com.harsh.RentRead.rent.controllers.RentalController$$SpringCGLIB$$0.getRental(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:925) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.19.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:213) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195) ~[spring-webmvc-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230) ~[spring-security-config-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.5.jar:6.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.19.jar:10.1.19]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2024-03-31T22:45:33.150+05:30  WARN 15152 --- [RentRead] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.harsh.RentRead.exception.exceptions.ResourceNotFoundException: User not found with User Id: 4]
+2024-03-31T22:45:57.112+05:30  INFO 15152 --- [RentRead] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-03-31T22:45:57.164+05:30  INFO 15152 --- [RentRead] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:45:57.181+05:30  INFO 15152 --- [RentRead] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-31T22:45:57.269+05:30  INFO 15152 --- [RentRead] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-03-31T22:45:57.744+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 15152 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T22:45:57.755+05:30 DEBUG 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T22:45:57.774+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T22:45:59.964+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T22:46:00.047+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2024-03-31T22:46:00.914+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-31T22:46:01.080+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-31T22:46:01.088+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-31T22:46:01.195+05:30  INFO 15152 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-31T22:46:01.197+05:30  INFO 15152 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3327 ms
+2024-03-31T22:46:01.512+05:30  INFO 15152 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T22:46:01.522+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-31T22:46:01.536+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T22:46:01.540+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-03-31T22:46:01.691+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e7c764a
+2024-03-31T22:46:01.693+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-03-31T22:46:02.557+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T22:46:02.670+05:30  INFO 15152 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:04.087+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T22:46:04.610+05:30  WARN 15152 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T22:46:05.528+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T22:46:05.627+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@53075aa7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f4fd4c2, org.springframework.security.web.context.SecurityContextHolderFilter@6baf1011, org.springframework.security.web.header.HeaderWriterFilter@722d2828, org.springframework.web.filter.CorsFilter@958b01f, org.springframework.security.web.authentication.logout.LogoutFilter@50388c8c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@474ff22e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c330bdd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58f33c2b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@313efd98, org.springframework.security.web.access.ExceptionTranslationFilter@6d0336f6, org.springframework.security.web.access.intercept.AuthorizationFilter@25326266]
+2024-03-31T22:46:06.070+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-31T22:46:06.146+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-31T22:46:06.160+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 8.671 seconds (process running for 244.185)
+2024-03-31T22:46:06.222+05:30  INFO 15152 --- [RentRead] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-31T22:46:09.593+05:30  INFO 15152 --- [RentRead] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2024-03-31T22:46:09.619+05:30  INFO 15152 --- [RentRead] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:09.622+05:30  INFO 15152 --- [RentRead] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-03-31T22:46:09.646+05:30  INFO 15152 --- [RentRead] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-03-31T22:46:09.987+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 15152 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T22:46:09.991+05:30 DEBUG 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T22:46:09.995+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T22:46:10.572+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T22:46:10.630+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2024-03-31T22:46:11.071+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-31T22:46:11.092+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-31T22:46:11.112+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-31T22:46:11.268+05:30  INFO 15152 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-31T22:46:11.294+05:30  INFO 15152 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1267 ms
+2024-03-31T22:46:11.489+05:30  INFO 15152 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T22:46:11.576+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-31T22:46:11.600+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T22:46:11.609+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-03-31T22:46:11.662+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b117261
+2024-03-31T22:46:11.666+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-03-31T22:46:12.088+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T22:46:12.199+05:30  INFO 15152 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:12.651+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T22:46:12.746+05:30  WARN 15152 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T22:46:12.936+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T22:46:12.958+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2de2cd47, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a6ed9f0, org.springframework.security.web.context.SecurityContextHolderFilter@52bf95a1, org.springframework.security.web.header.HeaderWriterFilter@4bed43a8, org.springframework.web.filter.CorsFilter@219d4085, org.springframework.security.web.authentication.logout.LogoutFilter@187fa4ff, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@485fd0ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@181cd6ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1712cc42, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@177324f1, org.springframework.security.web.access.ExceptionTranslationFilter@ac0a826, org.springframework.security.web.access.intercept.AuthorizationFilter@675b927a]
+2024-03-31T22:46:13.121+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-31T22:46:13.137+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-31T22:46:13.161+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 3.273 seconds (process running for 251.186)
+2024-03-31T22:46:13.205+05:30  INFO 15152 --- [RentRead] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-31T22:46:32.755+05:30  INFO 15152 --- [RentRead] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-03-31T22:46:32.817+05:30  INFO 15152 --- [RentRead] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:32.819+05:30  INFO 15152 --- [RentRead] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-03-31T22:46:32.839+05:30  INFO 15152 --- [RentRead] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-03-31T22:46:34.841+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 15152 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T22:46:35.065+05:30 DEBUG 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T22:46:35.087+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T22:46:38.330+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T22:46:38.426+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 3 JPA repository interfaces.
+2024-03-31T22:46:38.965+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-31T22:46:38.968+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-31T22:46:38.969+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-31T22:46:39.122+05:30  INFO 15152 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-31T22:46:39.124+05:30  INFO 15152 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3937 ms
+2024-03-31T22:46:39.298+05:30  INFO 15152 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T22:46:39.304+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-31T22:46:39.330+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T22:46:39.338+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-03-31T22:46:39.423+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34f79f4c
+2024-03-31T22:46:39.425+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-03-31T22:46:39.914+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T22:46:40.054+05:30  INFO 15152 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:40.620+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T22:46:40.739+05:30  WARN 15152 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T22:46:40.982+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T22:46:41.033+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b151ab6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@527bc2f4, org.springframework.security.web.context.SecurityContextHolderFilter@1feec365, org.springframework.security.web.header.HeaderWriterFilter@1a525f0f, org.springframework.web.filter.CorsFilter@bfc0aca, org.springframework.security.web.authentication.logout.LogoutFilter@6065d508, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@75165c89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e84f501, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1db57aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c49ed28, org.springframework.security.web.access.ExceptionTranslationFilter@62c9a73c, org.springframework.security.web.access.intercept.AuthorizationFilter@327d746d]
+2024-03-31T22:46:41.204+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-31T22:46:41.223+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-31T22:46:41.233+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 8.256 seconds (process running for 279.259)
+2024-03-31T22:46:41.236+05:30  INFO 15152 --- [RentRead] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-31T22:46:42.879+05:30  INFO 15152 --- [RentRead] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-03-31T22:46:42.900+05:30  INFO 15152 --- [RentRead] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:42.902+05:30  INFO 15152 --- [RentRead] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-03-31T22:46:42.915+05:30  INFO 15152 --- [RentRead] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-03-31T22:46:43.201+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 15152 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T22:46:43.204+05:30 DEBUG 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T22:46:43.205+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T22:46:44.163+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T22:46:44.320+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 139 ms. Found 3 JPA repository interfaces.
+2024-03-31T22:46:44.915+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-31T22:46:45.070+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-31T22:46:45.149+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-31T22:46:45.336+05:30  INFO 15152 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-31T22:46:45.346+05:30  INFO 15152 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2121 ms
+2024-03-31T22:46:45.727+05:30  INFO 15152 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T22:46:45.749+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-31T22:46:45.788+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T22:46:45.795+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-03-31T22:46:45.854+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dc28d57
+2024-03-31T22:46:45.855+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-03-31T22:46:46.689+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T22:46:47.176+05:30  INFO 15152 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:48.235+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T22:46:48.356+05:30  WARN 15152 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T22:46:48.811+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T22:46:48.907+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60b5563f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71c6da40, org.springframework.security.web.context.SecurityContextHolderFilter@3f3bdad, org.springframework.security.web.header.HeaderWriterFilter@43535adf, org.springframework.web.filter.CorsFilter@1c0dd65e, org.springframework.security.web.authentication.logout.LogoutFilter@6a46dde3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3c402d91, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d986050, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d1a3add, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@219c5ceb, org.springframework.security.web.access.ExceptionTranslationFilter@6a2d55f3, org.springframework.security.web.access.intercept.AuthorizationFilter@7802b482]
+2024-03-31T22:46:49.247+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-31T22:46:49.279+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-31T22:46:49.290+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 6.204 seconds (process running for 287.315)
+2024-03-31T22:46:49.297+05:30  INFO 15152 --- [RentRead] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-31T22:46:50.704+05:30  INFO 15152 --- [RentRead] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-03-31T22:46:50.742+05:30  INFO 15152 --- [RentRead] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:50.750+05:30  INFO 15152 --- [RentRead] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-03-31T22:46:50.777+05:30  INFO 15152 --- [RentRead] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-03-31T22:46:51.468+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 15152 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T22:46:51.472+05:30 DEBUG 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T22:46:51.478+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T22:46:52.293+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T22:46:52.419+05:30  INFO 15152 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 3 JPA repository interfaces.
+2024-03-31T22:46:52.899+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-31T22:46:52.901+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-31T22:46:52.903+05:30  INFO 15152 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-31T22:46:53.033+05:30  INFO 15152 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-31T22:46:53.035+05:30  INFO 15152 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1550 ms
+2024-03-31T22:46:53.213+05:30  INFO 15152 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T22:46:53.221+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-31T22:46:53.236+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T22:46:53.245+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-03-31T22:46:53.282+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20e4a18d
+2024-03-31T22:46:53.285+05:30  INFO 15152 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-03-31T22:46:53.721+05:30  INFO 15152 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T22:46:53.810+05:30  INFO 15152 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T22:46:54.253+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T22:46:54.351+05:30  WARN 15152 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T22:46:54.567+05:30 DEBUG 15152 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T22:46:54.595+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50cb7a7c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@299f2a12, org.springframework.security.web.context.SecurityContextHolderFilter@1a5c407c, org.springframework.security.web.header.HeaderWriterFilter@71fdd482, org.springframework.web.filter.CorsFilter@60bb0437, org.springframework.security.web.authentication.logout.LogoutFilter@764b65d4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7d03d5cd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ca99aef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@112a14b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3751850, org.springframework.security.web.access.ExceptionTranslationFilter@46d77531, org.springframework.security.web.access.intercept.AuthorizationFilter@175bd6c0]
+2024-03-31T22:46:54.783+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-31T22:46:54.803+05:30  INFO 15152 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-31T22:46:54.855+05:30  INFO 15152 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 3.635 seconds (process running for 292.881)
+2024-03-31T22:46:54.899+05:30  INFO 15152 --- [RentRead] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

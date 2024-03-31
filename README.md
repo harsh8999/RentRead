@@ -126,7 +126,15 @@ To run this application locally, follow these steps:
     ```
 - DELETE /api/v1/books/{book_id}/delete - Delete a Book
 
+## Rent Book Endpoints
+### Authorization: Basic Authentication required with user credentials
 
+### Private Endpoints
+- POST /api/v1/rental/books/{book_id}/rent - Rent a book.
+- POST /api/v1/rental/books/{book_id}/return - Return a rented book.
+
+### Private ADMIN Endpoints
+- GET /api/v1/rental - Get All Rental Details for all users.
 
 ## Class Diagram
 https://lucid.app/lucidchart/46138806-4354-46a5-b75c-844a051a4537/edit?viewport_loc=-298%2C-78%2C2265%2C957%2C0_0&invitationId=inv_e6eb36ee-3cf5-4f23-9886-40b580ee6344

@@ -15,7 +15,6 @@ import com.harsh.RentRead.rent.entity.Rental;
 import com.harsh.RentRead.rent.repository.RentalRepository;
 import com.harsh.RentRead.rent.services.RentalService;
 import com.harsh.RentRead.user.entity.User;
-import com.harsh.RentRead.user.repository.UserRepository;
 import com.harsh.RentRead.user.services.UserAuthService;
 
 import lombok.AllArgsConstructor;
@@ -27,8 +26,6 @@ import lombok.extern.slf4j.Slf4j;
 public class RentalServiceImplementation implements RentalService {
 
     private final RentalRepository rentalRepository;
-
-    private final UserRepository userRepository;
 
     private final UserAuthService userAuthService;
 
@@ -127,29 +124,6 @@ public class RentalServiceImplementation implements RentalService {
 
         log.info("Fetched rental with rentalId {}", rentalId);
         return modelMapper.map(rental, RentalDto.class);
-    }
-
-    @Override
-    public List<RentalDto> getAllRentalsOfUser(Long userId) {
-        log.debug("Fetching all rentals of user with userId {}", userId);
-
-        if(userId == null) {
-            throw new IllegalArgumentException("User Id cannot be null!!!");
-        }
-
-        User user = userRepository.findById(userId)
-            .orElseThrow(() -> new ResourceNotFoundException("User", "User Id", Long.toString(userId)));
-
-        Optional<List<Rental>> rentals = rentalRepository.findByUserId(user);
-        log.info("Fetched {} rentals of user with userId {}", rentals.get().size(), userId);
-        if(rentals.isPresent())
-            return rentals.stream()
-                        .map(rental -> modelMapper.map(rental, RentalDto.class))
-                        .collect(Collectors.toList());
-        
-        // if user has not rented any book 
-        // return empty list
-        return List.of();
     }
     
 }

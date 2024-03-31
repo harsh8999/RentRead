@@ -11,6 +11,5 @@ public interface RentalService {
     // methods for admin
     List<RentalDto> getAllRentals();
     RentalDto getRentalById(Long rentalId);
-    List<RentalDto> getAllRentalsOfUser(Long userId);
     
 }

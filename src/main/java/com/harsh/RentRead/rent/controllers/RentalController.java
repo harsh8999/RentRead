@@ -57,13 +57,4 @@ public class RentalController {
         return ResponseEntity.ok().body(rentalDtos);
     }
 
-    @GetMapping(BASE_URL + "/users/{user_id}")
-    @PreAuthorize("hasAuthority('ADMIN')")
-    public ResponseEntity<List<RentalDto>> getRental(@PathVariable("user_id") Long userId) {
-        log.debug("Received request to get rental details of User Id {}", userId);
-        List<RentalDto> rentalDtos = rentalService.getAllRentalsOfUser(userId);
-        log.info("Returning Rental details of User Id {}", userId);
-        return ResponseEntity.ok().body(rentalDtos);
-    }
-
 }
