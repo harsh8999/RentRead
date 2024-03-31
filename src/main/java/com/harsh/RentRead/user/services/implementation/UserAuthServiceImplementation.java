@@ -48,10 +48,7 @@ public class UserAuthServiceImplementation implements UserAuthService {
         if (requestUserDto.getRole() == null) {
             user.addRole(Role.USER);
         } else {
-            if (requestUserDto.getRole().equalsIgnoreCase("ADMIN")) 
-                user.addRole(Role.ADMIN);
-            if (requestUserDto.getRole().equalsIgnoreCase("USER")) 
-                user.addRole(Role.USER);
+            user.addRole(requestUserDto.getRole());
         }
 
         // save the user

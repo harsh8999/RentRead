@@ -9,6 +9,7 @@ import com.harsh.RentRead.user.entity.User;
 
 /**
  * Repository interface for managing User entities.
+ * Extends JpaRepository to inherit basic CRUD operations.
  */
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {

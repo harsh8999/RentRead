@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.harsh.RentRead.exception.exceptions.ResourceNotFoundException;
+import com.harsh.RentRead.user.controller.exchanges.AddRequestRoleDto;
 import com.harsh.RentRead.user.controller.exchanges.UserUpdateDto;
 import com.harsh.RentRead.user.dto.EmptyBodyDto;
 import com.harsh.RentRead.user.dto.UserDto;
@@ -99,16 +100,16 @@ public class UserServiceImplementation implements UserService {
             .orElseThrow(() -> new ResourceNotFoundException("User", "User ID", Long.toString(userId)));
 
         // update if details is present and not blank
-        if(userUpdateDto.getFirstName() != null && userUpdateDto.getFirstName().length() != 0) {
+        if(userUpdateDto.getFirstName() != null && !userUpdateDto.getFirstName().isBlank()) {
             user.setFirstName(userUpdateDto.getFirstName());
         }
-        if(userUpdateDto.getEmail() != null && userUpdateDto.getEmail().length() != 0) {
+        if(userUpdateDto.getEmail() != null && !userUpdateDto.getEmail().isBlank()) {
             user.setEmail(userUpdateDto.getEmail());
         }
-        if(userUpdateDto.getLastName() != null && userUpdateDto.getLastName().length() != 0) {
+        if(userUpdateDto.getLastName() != null && !userUpdateDto.getLastName().isBlank()) {
             user.setLastName(userUpdateDto.getLastName());
         }
-        if(userUpdateDto.getPassword() != null && userUpdateDto.getPassword().length() != 0) {
+        if(userUpdateDto.getPassword() != null && !userUpdateDto.getPassword().isBlank()) {
             user.setPassword(passwordEncoder.encode(userUpdateDto.getPassword()));
         }
 
@@ -118,14 +119,14 @@ public class UserServiceImplementation implements UserService {
     }
 
     @Override
-    public UserDto makeUserAdmin(Long userId) {
+    public UserDto addRole(Long userId, AddRequestRoleDto role) {
         log.info("Making user with ID {} an admin", userId);
         if(userId == null) {
             throw new IllegalArgumentException("User Id cannot be null!!!");
         }
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "ID", userId.toString()));
-        user.addRole(Role.ADMIN);
+        user.addRole(role.getRole());
         User updatedUser = userRepository.save(user);
         log.info("User with ID {} and email {} is now an admin", userId, user.getEmail());
         return modelMapper.map(updatedUser, UserDto.class);

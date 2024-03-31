@@ -2,6 +2,7 @@ package com.harsh.RentRead.user.services;
 
 import java.util.List;
 
+import com.harsh.RentRead.user.controller.exchanges.AddRequestRoleDto;
 import com.harsh.RentRead.user.controller.exchanges.UserUpdateDto;
 import com.harsh.RentRead.user.dto.EmptyBodyDto;
 import com.harsh.RentRead.user.dto.UserDto;
@@ -51,12 +52,15 @@ public interface UserService {
      */
     EmptyBodyDto deleteUser(Long userId);
 
+    
+
     /**
-     * Make a user an administrator.
+     * Adds a role to a user.
      *
-     * @param userId The ID of the user to make an administrator.
-     * @return The user DTO with updated role as ADMIN.
+     * @param userId The ID of the user to add the role to.
+     * @param role   The role to add.
+     * @return The user DTO with the added role.
      */
-    UserDto makeUserAdmin(Long userId);
+    UserDto addRole(Long userId, AddRequestRoleDto role);
     
 }

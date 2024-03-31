@@ -2,10 +2,12 @@ package com.harsh.RentRead.user.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import com.harsh.RentRead.user.controller.exchanges.AddRequestRoleDto;
 import com.harsh.RentRead.user.controller.exchanges.UserUpdateDto;
 import com.harsh.RentRead.user.dto.UserDto;
 import com.harsh.RentRead.user.services.UserService;
 
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -71,7 +73,7 @@ public class UserController {
      */
     @PutMapping(AUTHENTICATED_BASE_URL + "/{user_id}/update")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public ResponseEntity<UserDto> updateUserDetails(@PathVariable("user_id") Long userId, @RequestBody UserUpdateDto userUpdateDto) {
+    public ResponseEntity<UserDto> updateUserDetails(@PathVariable("user_id") Long userId,@Valid @RequestBody UserUpdateDto userUpdateDto) {
         log.info("Updating user with user ID: {}", userId);
         UserDto updatedUser = userService.updateUser(userId, userUpdateDto);
         log.info("User updated successfully: {}", updatedUser);
@@ -99,11 +101,11 @@ public class UserController {
      * @param userId The ID of the user to make an admin.
      * @return ResponseEntity containing the updated UserDto and status code.
      */
-    @PutMapping(AUTHENTICATED_BASE_URL + "/{user_id}/make_admin")
+    @PutMapping(AUTHENTICATED_BASE_URL + "/{user_id}/addRole")
     @PreAuthorize("hasAuthority('ADMIN')")
-    public ResponseEntity<UserDto> makeUserAnAdmin(@PathVariable("user_id") Long userId) {
+    public ResponseEntity<UserDto> makeUserAnAdmin(@PathVariable("user_id") Long userId, @Valid @RequestBody AddRequestRoleDto role) {
         log.info("Updating user role to ADMIN for user ID: {}", userId);
-        UserDto updatedUser = userService.makeUserAdmin(userId);
+        UserDto updatedUser = userService.addRole(userId, role);
         log.info("User updated successfully: {}", updatedUser);
         return ResponseEntity.ok().body(updatedUser);
     }

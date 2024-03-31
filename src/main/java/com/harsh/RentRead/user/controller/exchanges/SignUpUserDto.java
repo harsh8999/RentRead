@@ -1,5 +1,7 @@
 package com.harsh.RentRead.user.controller.exchanges;
 
+import com.harsh.RentRead.user.entity.enums.Role;
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AccessLevel;
@@ -51,6 +53,6 @@ public class SignUpUserDto {
      * The role of the user.
      * Optional field indicating the role of the user.
      */
-    String role;
+    Role role;
     
 }
