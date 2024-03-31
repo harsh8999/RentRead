@@ -93,6 +93,12 @@ public class UserController {
         return ResponseEntity.noContent().build();
     }
 
+    /**
+     * Endpoint to make a user an admin by updating their role.
+     *
+     * @param userId The ID of the user to make an admin.
+     * @return ResponseEntity containing the updated UserDto and status code.
+     */
     @PutMapping(AUTHENTICATED_BASE_URL + "/{user_id}/make_admin")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<UserDto> makeUserAnAdmin(@PathVariable("user_id") Long userId) {

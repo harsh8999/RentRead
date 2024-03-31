@@ -19,6 +19,9 @@ import com.harsh.RentRead.user.services.UserService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Implementation of the UserService interface.
+ */
 @Slf4j
 @Service
 @AllArgsConstructor
@@ -124,7 +127,7 @@ public class UserServiceImplementation implements UserService {
                 .orElseThrow(() -> new ResourceNotFoundException("User", "ID", userId.toString()));
         user.addRole(Role.ADMIN);
         User updatedUser = userRepository.save(user);
-        log.info("User with ID {} is now an admin", userId);
+        log.info("User with ID {} and email {} is now an admin", userId, user.getEmail());
         return modelMapper.map(updatedUser, UserDto.class);
     }
     

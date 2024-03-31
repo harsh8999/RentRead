@@ -1,0 +1,43 @@
+2024-03-31T09:40:36.743+05:30  INFO 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 1332 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T09:40:36.751+05:30 DEBUG 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T09:40:36.755+05:30  INFO 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T09:40:51.719+05:30 DEBUG 1332 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T09:40:53.269+05:30 DEBUG 1332 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T09:40:54.976+05:30  INFO 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 19.529 seconds (process running for 20.787)
+2024-03-31T09:41:16.718+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-2] c.h.R.u.controller.UserAuthController    : Root directory accessed. Response: Welcome to the RentRead application!
+2024-03-31T09:41:55.906+05:30 DEBUG 1332 --- [RentRead] [http-nio-8080-exec-6] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: harsh@gmail.com
+2024-03-31T09:41:56.965+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-6] c.h.R.user.controller.UserController     : Fetching all users from User Service
+2024-03-31T09:41:57.900+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-6] c.h.R.u.s.i.UserServiceImplementation    : Fetching all users
+2024-03-31T09:41:58.106+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-6] c.h.R.u.s.i.UserServiceImplementation    : Returning 4 users
+2024-03-31T09:41:58.108+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-6] c.h.R.user.controller.UserController     : Returning 4 users
+2024-03-31T09:42:35.093+05:30 DEBUG 1332 --- [RentRead] [http-nio-8080-exec-7] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: sahil@gmail.com
+2024-03-31T09:43:07.820+05:30  INFO 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Starting RentReadApplication using Java 17.0.10 with PID 1332 (F:\java Example\Code-a-thon\RentRead\target\classes started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-03-31T09:43:07.831+05:30 DEBUG 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-03-31T09:43:07.836+05:30  INFO 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-31T09:43:08.684+05:30  INFO 1332 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-31T09:43:08.749+05:30  INFO 1332 --- [RentRead] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
+2024-03-31T09:43:09.293+05:30  INFO 1332 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-31T09:43:09.301+05:30  INFO 1332 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-31T09:43:09.303+05:30  INFO 1332 --- [RentRead] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-31T09:43:09.427+05:30  INFO 1332 --- [RentRead] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-31T09:43:09.431+05:30  INFO 1332 --- [RentRead] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1510 ms
+2024-03-31T09:43:09.586+05:30  INFO 1332 --- [RentRead] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-31T09:43:09.633+05:30  INFO 1332 --- [RentRead] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-31T09:43:09.655+05:30  INFO 1332 --- [RentRead] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-31T09:43:09.666+05:30  INFO 1332 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-03-31T09:43:09.746+05:30  INFO 1332 --- [RentRead] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bcfc1e8
+2024-03-31T09:43:09.749+05:30  INFO 1332 --- [RentRead] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-03-31T09:43:09.914+05:30  INFO 1332 --- [RentRead] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-31T09:43:09.992+05:30  INFO 1332 --- [RentRead] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-31T09:43:10.327+05:30 DEBUG 1332 --- [RentRead] [restartedMain] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-03-31T09:43:10.528+05:30  WARN 1332 --- [RentRead] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-31T09:43:11.453+05:30 DEBUG 1332 --- [RentRead] [restartedMain] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-03-31T09:43:11.583+05:30  INFO 1332 --- [RentRead] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@700d8000, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22e7b419, org.springframework.security.web.context.SecurityContextHolderFilter@6fc4dc64, org.springframework.security.web.header.HeaderWriterFilter@28303d96, org.springframework.web.filter.CorsFilter@19f88584, org.springframework.security.web.authentication.logout.LogoutFilter@67e01b7e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@17d1426f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31c85e76, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77b84d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4277eee, org.springframework.security.web.access.ExceptionTranslationFilter@498ff145, org.springframework.security.web.access.intercept.AuthorizationFilter@4fae8140]
+2024-03-31T09:43:12.059+05:30  INFO 1332 --- [RentRead] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-31T09:43:12.105+05:30  INFO 1332 --- [RentRead] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-31T09:43:12.146+05:30  INFO 1332 --- [RentRead] [restartedMain] com.harsh.RentRead.RentReadApplication   : Started RentReadApplication in 4.43 seconds (process running for 157.957)
+2024-03-31T09:43:12.216+05:30  INFO 1332 --- [RentRead] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-03-31T09:43:34.428+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-31T09:43:34.430+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-31T09:43:34.433+05:30  INFO 1332 --- [RentRead] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-31T09:43:34.667+05:30 DEBUG 1332 --- [RentRead] [http-nio-8080-exec-3] c.h.R.u.s.c.UserSecurityConfiguraton     : Fetching user details for username: sahil@gmail.com
