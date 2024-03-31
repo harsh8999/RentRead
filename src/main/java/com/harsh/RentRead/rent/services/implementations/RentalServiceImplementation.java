@@ -113,9 +113,7 @@ public class RentalServiceImplementation implements RentalService {
         log.debug("Fetching all rentals");
         List<Rental> rentals = rentalRepository.findAll();
         log.info("Fetched {} rentals", rentals.size());
-        return rentals.stream()
-                      .map(rental -> modelMapper.map(rental, RentalDto.class))
-                      .collect(Collectors.toList());
+        return rentals.stream().map(rental -> modelMapper.map(rental, RentalDto.class)).collect(Collectors.toList());
     }
 
     @Override

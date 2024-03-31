@@ -88,7 +88,8 @@ public class BookController {
      * @param bookId The ID of the book to retrieve.
      * @return ResponseEntity representing the status of the retrieval operation along with the book DTO.
      */
-    @GetMapping(BASE_URL + "{book_id}")
+    @GetMapping(BASE_URL + "/{book_id}")
+    @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public ResponseEntity<BookDto> getBookById(@PathVariable("book_id") Long bookId) {
         log.info("Fetching book with Book Id {}", bookId);
         BookDto bookDto = bookService.getBookById(bookId);

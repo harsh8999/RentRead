@@ -2,6 +2,8 @@ package com.harsh.RentRead.rent.controllers;
 
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 import com.harsh.RentRead.rent.controllers.exchanges.ApiResponse;
 import com.harsh.RentRead.rent.dto.RentalDto;
 import com.harsh.RentRead.rent.services.RentalService;
@@ -11,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,6 +46,24 @@ public class RentalController {
         log.info("Book returned successfully for userId {} and bookId {}", returnedBook.getUser().getId(), bookId);
 
         return ResponseEntity.ok().body(new ApiResponse("Book returned successfully."));
+    }
+
+    @GetMapping(BASE_URL)
+    @PreAuthorize("hasAuthority('ADMIN')")
+    public ResponseEntity<List<RentalDto>> getAllRental() {
+        log.debug("Received request to get all rentals");
+        List<RentalDto> rentalDtos = rentalService.getAllRentals();
+        log.info("Returning All Rental details");
+        return ResponseEntity.ok().body(rentalDtos);
+    }
+
+    @GetMapping(BASE_URL + "/users/{user_id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
+    public ResponseEntity<List<RentalDto>> getRental(@PathVariable("user_id") Long userId) {
+        log.debug("Received request to get rental details of User Id {}", userId);
+        List<RentalDto> rentalDtos = rentalService.getAllRentalsOfUser(userId);
+        log.info("Returning Rental details of User Id {}", userId);
+        return ResponseEntity.ok().body(rentalDtos);
     }
 
 }
