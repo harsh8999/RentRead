@@ -19,13 +19,9 @@ To run this application locally, follow these steps:
 
 3. Run the application:
     ```bash
-    java -jar target/-0.0.1-SNAPSHOT.jar
+    java -jar target/RentRead-0.0.1-SNAPSHOT.jar
     ```
-
-## Images
-
-![This is an alt text.](\src\main\resources\images\class-diagram.png "This is a sample image.")
-
+    
 ## User Endpoints
 
 - GET /api/v1/ - Welcome To RentRead.
