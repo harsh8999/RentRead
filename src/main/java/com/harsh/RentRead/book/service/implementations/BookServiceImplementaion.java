@@ -91,7 +91,6 @@ public class BookServiceImplementaion implements BookService {
     @Override
     public BookDto getBookById(Long bookId) {
         if(bookId == null) {
-            log.error("Invalid book ID: {}", bookId);
             throw new IllegalArgumentException("Book ID cannot be null");
         }
         Book book = bookRepository.findById(bookId).orElseThrow(() -> new ResourceNotFoundException("Book", "Book Id", Long.toString(bookId)));

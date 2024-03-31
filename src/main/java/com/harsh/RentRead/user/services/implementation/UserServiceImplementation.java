@@ -13,7 +13,6 @@ import com.harsh.RentRead.user.controller.exchanges.UserUpdateDto;
 import com.harsh.RentRead.user.dto.EmptyBodyDto;
 import com.harsh.RentRead.user.dto.UserDto;
 import com.harsh.RentRead.user.entity.User;
-import com.harsh.RentRead.user.entity.enums.Role;
 import com.harsh.RentRead.user.repository.UserRepository;
 import com.harsh.RentRead.user.services.UserService;
 

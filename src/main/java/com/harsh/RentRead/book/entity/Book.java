@@ -52,6 +52,7 @@ public class Book {
     @Enumerated(EnumType.STRING)
     Genre genre;
 
+    // is book available for rental
     /**
      * The availability status of the book.
      */
