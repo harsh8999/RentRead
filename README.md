@@ -112,7 +112,7 @@ To run this application locally, follow these steps:
             "title": "Dune",
             "author": "Frank Herbert",
             "genre": "SCIFI"
-        }, ...
+        }
     ]
     ```
 - PUT /api/v1/books/{book_id}/update - Update Book Details
