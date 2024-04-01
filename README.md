@@ -143,6 +143,13 @@ To run this application locally, follow these steps:
 ### Private ADMIN Endpoints
 - GET /api/v1/rental - Get All Rental Details for all users.
 
+## Testing
+Run the JUnit test cases using:
+
+    mvnw test
+
+The tests include Mockito for mocking dependencies and verifying interactions between components.
+
 ## Class Diagram
 https://lucid.app/lucidchart/46138806-4354-46a5-b75c-844a051a4537/edit?viewport_loc=-298%2C-78%2C2265%2C957%2C0_0&invitationId=inv_e6eb36ee-3cf5-4f23-9886-40b580ee6344
 

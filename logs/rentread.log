@@ -468,3 +468,101 @@
 2024-04-01T15:28:24.364+05:30  INFO 13468 --- [RentRead] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-04-01T15:28:24.376+05:30  INFO 13468 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-04-01T15:28:24.449+05:30  INFO 13468 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-01T15:31:02.760+05:30  INFO 15056 --- [RentRead] [main] c.h.RentRead.RentReadApplicationTests    : Starting RentReadApplicationTests using Java 17.0.10 with PID 15056 (started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-04-01T15:31:02.765+05:30 DEBUG 15056 --- [RentRead] [main] c.h.RentRead.RentReadApplicationTests    : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-04-01T15:31:02.770+05:30  INFO 15056 --- [RentRead] [main] c.h.RentRead.RentReadApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-04-01T15:31:05.234+05:30  INFO 15056 --- [RentRead] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-01T15:31:05.467+05:30  INFO 15056 --- [RentRead] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 209 ms. Found 3 JPA repository interfaces.
+2024-04-01T15:31:07.139+05:30  INFO 15056 --- [RentRead] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-01T15:31:07.332+05:30  INFO 15056 --- [RentRead] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-01T15:31:07.436+05:30  INFO 15056 --- [RentRead] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-01T15:31:08.344+05:30  INFO 15056 --- [RentRead] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-01T15:31:08.445+05:30  INFO 15056 --- [RentRead] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-01T15:31:09.240+05:30  INFO 15056 --- [RentRead] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a3c99f1
+2024-04-01T15:31:09.247+05:30  INFO 15056 --- [RentRead] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-01T15:31:12.176+05:30  INFO 15056 --- [RentRead] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-01T15:31:12.360+05:30  INFO 15056 --- [RentRead] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-01T15:31:13.570+05:30 DEBUG 15056 --- [RentRead] [main] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-04-01T15:31:13.976+05:30  WARN 15056 --- [RentRead] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-01T15:31:14.706+05:30 DEBUG 15056 --- [RentRead] [main] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-04-01T15:31:14.800+05:30  INFO 15056 --- [RentRead] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a02fca5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b3a1151, org.springframework.security.web.context.SecurityContextHolderFilter@6203f10f, org.springframework.security.web.header.HeaderWriterFilter@4303511e, org.springframework.web.filter.CorsFilter@c9234a0, org.springframework.security.web.authentication.logout.LogoutFilter@60773809, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@8b727cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76ea1cb5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17e2ad13, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46bbcb82, org.springframework.security.web.access.ExceptionTranslationFilter@6f7e5e11, org.springframework.security.web.access.intercept.AuthorizationFilter@16c3388e]
+2024-04-01T15:31:15.815+05:30  INFO 15056 --- [RentRead] [main] c.h.RentRead.RentReadApplicationTests    : Started RentReadApplicationTests in 13.774 seconds (process running for 16.335)
+2024-04-01T15:31:17.117+05:30  INFO 15056 --- [RentRead] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.harsh.RentRead.user.services.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-04-01T15:31:17.278+05:30  INFO 15056 --- [RentRead] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.harsh.RentRead.RentReadApplication for test class com.harsh.RentRead.user.services.UserServiceTest
+2024-04-01T15:31:17.297+05:30  INFO 15056 --- [RentRead] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-04-01T15:31:17.369+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting UserServiceTest using Java 17.0.10 with PID 15056 (started by Acer in F:\java Example\Code-a-thon\RentRead)
+2024-04-01T15:31:17.370+05:30 DEBUG 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-04-01T15:31:17.371+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : No active profile set, falling back to 1 default profile: "default"
+2024-04-01T15:31:18.077+05:30  INFO 15056 --- [RentRead] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-01T15:31:18.104+05:30  INFO 15056 --- [RentRead] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2024-04-01T15:31:19.572+05:30  INFO 15056 --- [RentRead] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-01T15:31:19.582+05:30  INFO 15056 --- [RentRead] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-01T15:31:19.602+05:30  INFO 15056 --- [RentRead] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-01T15:31:19.606+05:30  INFO 15056 --- [RentRead] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-04-01T15:31:19.813+05:30  INFO 15056 --- [RentRead] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1504db11
+2024-04-01T15:31:19.814+05:30  INFO 15056 --- [RentRead] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-04-01T15:31:20.358+05:30  INFO 15056 --- [RentRead] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-01T15:31:20.454+05:30  INFO 15056 --- [RentRead] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-01T15:31:21.268+05:30 DEBUG 15056 --- [RentRead] [main] c.h.R.u.s.c.UserSecurityConfiguraton     : Configuring AuthenticationManager
+2024-04-01T15:31:21.606+05:30  WARN 15056 --- [RentRead] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-01T15:31:22.087+05:30 DEBUG 15056 --- [RentRead] [main] c.h.R.u.s.config.SecurityConfiguration   : Configuring security filter chain
+2024-04-01T15:31:22.174+05:30  INFO 15056 --- [RentRead] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@492c1b1b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5eb974, org.springframework.security.web.context.SecurityContextHolderFilter@53a20aab, org.springframework.security.web.header.HeaderWriterFilter@5aeaee3, org.springframework.web.filter.CorsFilter@72f112d1, org.springframework.security.web.authentication.logout.LogoutFilter@79c514e4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@189f5ed8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@362d91ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a58d05d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10faebc9, org.springframework.security.web.access.ExceptionTranslationFilter@38388639, org.springframework.security.web.access.intercept.AuthorizationFilter@2f6bb6d8]
+2024-04-01T15:31:22.909+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Started UserServiceTest in 5.614 seconds (process running for 23.429)
+2024-04-01T15:31:23.364+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting deleteUserIllegalArgumentExceptionTest
+2024-04-01T15:31:23.383+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Deleting user by user ID: null
+2024-04-01T15:31:23.384+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : deleteUserIllegalArgumentExceptionTest completed successfully
+2024-04-01T15:31:23.440+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting getUserByUserIdIllegalArgumentExceptionTest
+2024-04-01T15:31:23.442+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Fetching user by user ID: null
+2024-04-01T15:31:23.442+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : getUserByUserIdIllegalArgumentExceptionTest completed successfully
+2024-04-01T15:31:23.524+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting getUserByUserIdTest
+2024-04-01T15:31:23.626+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Fetching user by user ID: 1
+2024-04-01T15:31:23.665+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : User found: User(id=1, firstName=null, lastName=null, email=null, password=null, roles=[], createdAt=null)
+2024-04-01T15:31:23.869+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : getUserByUserIdTest completed successfully
+2024-04-01T15:31:23.924+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting updateUser
+2024-04-01T15:31:23.925+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Updating user with user ID: null
+2024-04-01T15:31:23.927+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Updating user with user ID: 1
+2024-04-01T15:31:23.929+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Updating user with user ID: null
+2024-04-01T15:31:23.930+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : updateUser completed successfully
+2024-04-01T15:31:23.978+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting addRoleUserNotFoundThrowsResourceNotFoundException
+2024-04-01T15:31:24.007+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Making user with ID 1 an admin
+2024-04-01T15:31:24.008+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : addRoleUserNotFoundThrowsResourceNotFoundException completed successfully
+2024-04-01T15:31:24.057+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting addRoleTest
+2024-04-01T15:31:24.058+05:30 DEBUG 15056 --- [RentRead] [main] com.harsh.RentRead.user.entity.User      : Role USER added to user harsh@example.com
+2024-04-01T15:31:24.059+05:30 DEBUG 15056 --- [RentRead] [main] com.harsh.RentRead.user.entity.User      : Role ADMIN added to user harsh@example.com
+2024-04-01T15:31:24.063+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Making user with ID 1 an admin
+2024-04-01T15:31:24.074+05:30 DEBUG 15056 --- [RentRead] [main] com.harsh.RentRead.user.entity.User      : Role ADMIN added to user harsh@example.com
+2024-04-01T15:31:24.075+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : User with ID 1 and email harsh@example.com is now an admin
+2024-04-01T15:31:24.097+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : addRoleTest completed successfully
+2024-04-01T15:31:24.157+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting getUserByEmailTest
+2024-04-01T15:31:24.163+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Fetching user by user ID: 1
+2024-04-01T15:31:24.163+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : User found: User(id=null, firstName=null, lastName=null, email=mail.com, password=null, roles=[], createdAt=null)
+2024-04-01T15:31:24.179+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : getUserByEmailTest completed successfully
+2024-04-01T15:31:24.247+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting 'getUser' test case...
+2024-04-01T15:31:24.259+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Fetching all users
+2024-04-01T15:31:24.275+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Returning 1 users
+2024-04-01T15:31:24.276+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Number of users returned by getAllUsers(): 1
+2024-04-01T15:31:24.320+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting getUserByEmailTestResourceNotFoundExceptionTest
+2024-04-01T15:31:24.326+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Fetching user by email: harsh@gmail.com
+2024-04-01T15:31:24.329+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : getUserByEmailTestResourceNotFoundExceptionTest completed successfully
+2024-04-01T15:31:24.397+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting updateUserTest
+2024-04-01T15:31:24.408+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Updating user with user ID: 1
+2024-04-01T15:31:24.412+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : User updated successfully: User(id=1, firstName=Sahil, lastName=null, email=null, password=null, roles=[], createdAt=null)
+2024-04-01T15:31:24.425+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : updateUserTest completed successfully
+2024-04-01T15:31:24.507+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting getUserByUserIdTestResourceNotFoundExceptionTest
+2024-04-01T15:31:24.509+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Fetching user by user ID: 1
+2024-04-01T15:31:24.510+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : getUserByUserIdTestResourceNotFoundExceptionException completed successfully
+2024-04-01T15:31:24.543+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting updateUserTestResourceNotFoundExceptionTest
+2024-04-01T15:31:24.545+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Updating user with user ID: 1
+2024-04-01T15:31:24.545+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : updateUserTestResourceNotFoundExceptionTest completed successfully
+2024-04-01T15:31:24.624+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting getUserByEmailIllegalArgumentExceptionTest
+2024-04-01T15:31:24.630+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Fetching user by email: null
+2024-04-01T15:31:24.631+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : getUserByEmailIllegalArgumentExceptionTest completed successfully
+2024-04-01T15:31:24.665+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : Starting deleteUserTestResourceNotFoundExceptionTest
+2024-04-01T15:31:24.672+05:30  INFO 15056 --- [RentRead] [main] c.h.R.u.s.i.UserServiceImplementation    : Deleting user by user ID: 1
+2024-04-01T15:31:24.679+05:30  INFO 15056 --- [RentRead] [main] c.h.R.user.services.UserServiceTest      : deleteUserTestResourceNotFoundExceptionTest completed successfully
+2024-04-01T15:31:24.834+05:30  INFO 15056 --- [RentRead] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-01T15:31:24.843+05:30  INFO 15056 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-01T15:31:24.896+05:30  INFO 15056 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-04-01T15:31:24.913+05:30  INFO 15056 --- [RentRead] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-01T15:31:24.916+05:30  INFO 15056 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-04-01T15:31:24.938+05:30  INFO 15056 --- [RentRead] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
