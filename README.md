@@ -22,10 +22,15 @@ To run this application locally, follow these steps:
     java -jar target/RentRead-0.0.1-SNAPSHOT.jar
     ```
     
+## Api Dcoumentations Endpoint
+
+- GET /swagger-ui/index.html - Api Documentations
+
 ## User Endpoints
 
 - GET /api/v1/ - Welcome To RentRead.
 
+## User Auth Endpoints
 ### Public Endpoints
 - POST /api/v1/auth/signup - Register a new user (Role can be ADMIN, USER), Default Role: USER.
     ### Request Body
@@ -56,12 +61,14 @@ To run this application locally, follow these steps:
     }
     ```
 
-## Private ADMIN Endpoints 
+## User Endpoint
+### Private ADMIN Endpoints 
 ### Authorization: Basic Authentication required with ADMIN credentials
 
 
 - GET /api/v1/users - Get all the Users
-- PUT /api/v1/users/{user_id}/update - Update a user 
+- GET /api/v1/users/{user_id} - Get User By userId
+- PUT /api/v1/users/{user_id}/update - Update a user by userId
     ### Request Body
     ```json
     {
@@ -76,7 +83,7 @@ To run this application locally, follow these steps:
     ### Request Body
     ```json
     {
-    	"role": "ADMIN"
+    	"role": "USER"
     }
     ```
 - DELETE /api/v1/users/{user_id} - Delete a User
