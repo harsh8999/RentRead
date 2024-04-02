@@ -18,6 +18,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * Controller class for managing book rentals.
+ */
 @RestController
 @Slf4j
 @AllArgsConstructor
@@ -28,6 +31,12 @@ public class RentalController {
 
     private static final String BASE_URL = "/rental";
 
+    /**
+     * Endpoint for renting a book.
+     *
+     * @param bookId The ID of the book to rent.
+     * @return ResponseEntity containing RentalDto.
+     */
     @PostMapping(BASE_URL + "/books/{book_id}/rent")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public ResponseEntity<RentalDto> rentBook(@PathVariable("book_id") Long bookId) {
@@ -37,7 +46,12 @@ public class RentalController {
         return ResponseEntity.ok().body(rentalDto);
     }
 
-
+    /**
+     * Endpoint for returning a rented book.
+     *
+     * @param bookId The ID of the book to return.
+     * @return ResponseEntity containing ApiResponse.
+     */
     @PostMapping(BASE_URL + "/books/{book_id}/return")
     @PreAuthorize("hasAnyAuthority('ADMIN', 'USER')")
     public ResponseEntity<ApiResponse> returnBook(@PathVariable("book_id") Long bookId) {
@@ -48,6 +62,11 @@ public class RentalController {
         return ResponseEntity.ok().body(new ApiResponse("Book returned successfully."));
     }
 
+    /**
+     * Endpoint for retrieving all rentals (for admin use).
+     *
+     * @return ResponseEntity containing List of RentalDto.
+     */
     @GetMapping(BASE_URL)
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<List<RentalDto>> getAllRental() {

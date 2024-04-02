@@ -20,6 +20,9 @@ import com.harsh.RentRead.user.services.UserAuthService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Service implementation for managing rentals.
+ */
 @Slf4j
 @Service
 @AllArgsConstructor

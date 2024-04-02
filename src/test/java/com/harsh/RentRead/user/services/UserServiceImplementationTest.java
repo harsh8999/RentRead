@@ -19,7 +19,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Description;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.harsh.RentRead.exception.exceptions.ResourceNotFoundException;
@@ -35,7 +34,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest
 @Slf4j
-public class UserServiceTest {
+public class UserServiceImplementationTest {
     
     @InjectMocks
     private UserServiceImplementation userService;
@@ -46,8 +45,8 @@ public class UserServiceTest {
     @Spy
     ModelMapper modelMapper = new ModelMapper();
 
-    @Spy
-    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    @MockBean
+    PasswordEncoder passwordEncoder;
 
     @BeforeEach
     public void setUp() {
@@ -55,8 +54,8 @@ public class UserServiceTest {
     }
 
     @Test
-    public void getUser() {
-        log.info("Starting 'getUser' test case...");
+    public void getUsersTest() {
+        log.info("Starting getUsersTest");
         List<User> users = new ArrayList<>();
         users.add(new User());
         when(userRepository.findAll()).thenReturn(users);
@@ -66,6 +65,7 @@ public class UserServiceTest {
 
         // Assert
         assertEquals(1, result.size());
+        log.info("getUsersTest completed successfully");
     }
 
     @Test

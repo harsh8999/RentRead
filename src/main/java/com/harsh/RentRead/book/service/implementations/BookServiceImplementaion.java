@@ -55,6 +55,11 @@ public class BookServiceImplementaion implements BookService {
     public List<BookDto> addAllBooks(List<AddBookExchangeDto> bookDtos) {
         log.info("Adding multiple books");
 
+        if(bookDtos == null) {
+            log.error("Invalid request: List of Book DTO is null.");
+            throw new IllegalArgumentException("Request cannot be null or missing required fields");    
+        }
+        
         List<Book> booksToAdd = new ArrayList<>();
         bookDtos.forEach(bookDto -> {
             Book book = new Book();
