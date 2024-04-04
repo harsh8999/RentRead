@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.harsh.RentRead.book.entity.Book;
@@ -36,7 +37,10 @@ public class RentalServiceImplementation implements RentalService {
 
     private final ModelMapper modelMapper;
 
-    private static final int RENTAL_LIMIT = 2;
+    // private static final int RENTAL_LIMIT = 2;
+    // Injecting the property from application.properties
+    @Value("${rental.limit}") 
+    private static int RENTAL_LIMIT;
 
     @Override
     public RentalDto rentBook(Long bookId) {
@@ -47,7 +51,7 @@ public class RentalServiceImplementation implements RentalService {
             throw new IllegalArgumentException("Book ID cannot be null");
         }
 
-        Book book = bookRepository.findByIdAndAvailabilityStatus(bookId, true)
+        Book book = bookRepository.findByIdAndAvailabilityStatusTrue(bookId)
             .orElseThrow(() -> new IllegalStateException("Book is not available for rent!"));
 
         // check if user has books than RENTAL_LIMIT books

@@ -15,12 +15,11 @@ import com.harsh.RentRead.book.entity.Book;
 public interface BookRepository extends JpaRepository<Book, Long> {
 
     /**
-     * Retrieves a book by its ID and availability status.
+     * Retrieves an available book by its ID.
      *
-     * @param bookId             The ID of the book to retrieve.
-     * @param availabilityStatus The availability status of the book.
-     * @return An Optional containing the book, or empty if not found.
-     */
-    Optional<Book> findByIdAndAvailabilityStatus(Long bookId, boolean availabilityStatus);
+     * @param bookId The ID of the book to retrieve.
+     * @return An Optional containing the book if available, empty otherwise.
+     */    
+    Optional<Book> findByIdAndAvailabilityStatusTrue(Long bookId);
     
 }
